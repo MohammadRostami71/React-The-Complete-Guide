@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript-refresher</title>
+</head>
+<body>
+<div>javascript-refresher</div>
+<div>show the console</div>
+</body>
+</html>
+<script>
+    let myName = 'mohammad';
+    console.log(myName)
+    myName = 'mamad'
+    console.log(myName)
+
+    function printMyName(name) {
+        console.log(name)
+    }
+
+    printMyName('mohammad rostami')
+
+    const multiply = (number) => {
+        return number * 2
+    }
+    console.log(multiply(10))
+
+    class Human {
+        gender = 'female';
+
+        printGender = () => {
+            console.log(this.gender)
+        }
+    }
+
+    class Person extends Human {
+        name = 'mohammad';
+        gender = 'male';
+
+        printName = () => {
+            console.log(this.name);
+        }
+    }
+
+    const person = new Person();
+    person.printName();
+    person.printGender();
+
+    const numbers = [1, 2, 3];
+    const newNumbers = [...numbers, 4, 5];
+    console.log(newNumbers);
+
+    const personObject = {name: 'mohammad'};
+    const newPersonObject = {...personObject, family: 'rostami'};
+    console.log(newPersonObject)
+
+    const filter = (...args) => {
+        return args.filter(el => el === 1);
+    }
+    console.log(filter(1, 2, 3))
+    const numbers2 = [1, 2, 3];
+    [num1, num2] = numbers2;
+    console.log(num1, num2);
+
+    const personType = {
+        name: 'mamad'
+    };
+
+    const newPersonType = {...personType};
+    personType.name = 'mohammad';
+    console.log(newPersonType);
+
+    const numTest = [1, 2, 3, 4];
+    const doubleNumArray = numTest.map((num) => {
+        return num * 2
+    });
+    console.log(numTest)
+    console.log(doubleNumArray)
+</script>
