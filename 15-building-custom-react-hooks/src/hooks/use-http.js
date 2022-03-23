@@ -28,8 +28,6 @@ const useHttp = () => {
             for (const taskKey in data) {
                 loadedTasks.push({id: taskKey, text: data[taskKey].text});
             }
-
-            setTasks(loadedTasks);
         } catch (err) {
             setError(err.message || 'Something went wrong!');
         }
